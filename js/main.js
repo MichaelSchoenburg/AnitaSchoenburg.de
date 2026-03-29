@@ -29,6 +29,7 @@ if (navToggle && siteNav) {
 // ── Lightbox ─────────────────────────────────────────────
 const lightbox        = document.getElementById('lightbox');
 const lightboxImg     = document.getElementById('lightboxImg');
+const lightboxVideo   = document.getElementById('lightboxVideo');
 const lightboxCaption = document.getElementById('lightboxCaption');
 
 function openLightbox(paintingEl) {
@@ -37,28 +38,48 @@ function openLightbox(paintingEl) {
   lightboxImg.src              = img.src;
   lightboxImg.alt              = img.alt;
   lightboxCaption.textContent  = caption;
+  lightboxImg.hidden           = false;
+  if (lightboxVideo) lightboxVideo.hidden = true;
   lightbox.classList.add('is-open');
   document.body.style.overflow = 'hidden';
+}
+
+function openVideoLightbox(paintingEl) {
+  const src     = paintingEl.dataset.video || '';
+  const caption = paintingEl.dataset.caption || '';
+  lightboxVideo.src            = src;
+  lightboxCaption.textContent  = caption;
+  lightboxImg.hidden           = true;
+  lightboxVideo.hidden         = false;
+  lightbox.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  lightboxVideo.play();
 }
 
 function closeLightbox(event) {
   // Aufgerufen ohne Argument (X-Button onclick): immer schließen
   if (!event) {
-    lightbox.classList.remove('is-open');
-    document.body.style.overflow = '';
+    _doCloseLightbox();
     return;
   }
   // Aufgerufen vom lightbox-onclick: nur schließen wenn Klick auf den Hintergrund
   if (event.target === lightbox) {
-    lightbox.classList.remove('is-open');
-    document.body.style.overflow = '';
+    _doCloseLightbox();
+  }
+}
+
+function _doCloseLightbox() {
+  lightbox.classList.remove('is-open');
+  document.body.style.overflow = '';
+  if (lightboxVideo && !lightboxVideo.hidden) {
+    lightboxVideo.pause();
+    lightboxVideo.src = '';
   }
 }
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    lightbox.classList.remove('is-open');
-    document.body.style.overflow = '';
+    _doCloseLightbox();
   }
 });
 

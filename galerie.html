@@ -144,6 +144,22 @@
                     YouTube-Kanal erstellen kann.</p>
                 </div>
               </div>
+              <!-- KI-Video 1 -->
+              <div class="painting painting--video" data-caption="Kupfergrün auf altem Stein"
+                data-video="assets/video/Kupfergrün_auf_altem_Stein.mp4" onclick="openVideoLightbox(this)">
+                <video src="assets/video/Kupfergrün_auf_altem_Stein.mp4" preload="metadata" muted playsinline
+                  aria-hidden="true"></video>
+                <div class="painting-play-btn" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                    <circle cx="12" cy="12" r="12" fill="rgba(82,16,64,0.75)" />
+                    <polygon points="10,8 18,12 10,16" fill="#D4AF37" />
+                  </svg>
+                </div>
+                <div class="painting-info">
+                  <h3>Kupfergrün auf altem Stein</h3>
+                  <p>KI-generiertes Video</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -222,6 +238,7 @@
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
     <img id="lightboxImg" src="" alt="">
+    <video id="lightboxVideo" controls playsinline></video>
     <p class="lightbox-caption" id="lightboxCaption"></p>
   </div>
 
