@@ -29,7 +29,10 @@
   gap: 0.5rem;
 }
 
-.site-logo span.rose { font-size: 1.4rem; }
+.site-logo-img {
+  height: 35px;
+  width: auto;
+}
 
 .site-nav {
   display: flex;
