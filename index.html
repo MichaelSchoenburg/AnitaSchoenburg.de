@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Anita Schönburg – Malerei und Gedanken. Ein Raum zum Verweilen, Nachdenken und Austauschen.">
   <title>Anita Schönburg – Malerei &amp; Gedanken</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anita Schönburg – Malerei &amp; Gedanken">
+  <meta property="og:description" content="Ein Raum zum Verweilen, Nachdenken und Austauschen. Gemälde, Gedanken und Dialog.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.anitaschoenburg.de">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Anita Schönburg">
+
+  <!-- Google Fonts (performance: preconnect + link statt @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -36,9 +50,9 @@
   <main>
     <!-- HERO -->
     <section class="section" id="willkommen">
-      <div class="container" style="text-align: center; max-width: 780px;">
+      <div class="container" style="text-align: center; max-width: 780px;" data-animate>
         <h1>Willkommen</h1>
-        <div class="divider"></div>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
         <p>
           Ich heiße euch hier recht herzlich willkommen in diesem Raum der vielen Gedanken –
           zu denen meine Gemälde euch inspirieren sollen. Ich möchte anregen, zum Nachdenken
@@ -49,9 +63,9 @@
 
     <!-- ÜBER MICH -->
     <section class="section section--alt" id="ueber-mich" style="background-color: var(--color-beige);">
-      <div class="container" style="max-width: 780px;">
+      <div class="container" style="max-width: 780px;" data-animate>
         <h2 class="section-title">Wer bin ich?</h2>
-        <div class="divider"></div>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
         <p>
           Mein Name ist Anita Schönburg – und ich freue mich über jeden, der hier verweilen mag.
           Für mich ist Kunst gleich die Kunst des Lebens: das, was von innen nach außen drängt
@@ -63,9 +77,9 @@
 
     <!-- GALERIE-VORSCHAU -->
     <section class="section" id="galerie-vorschau">
-      <div class="container">
+      <div class="container" data-animate>
         <h2 class="section-title">Meine Arbeiten</h2>
-        <div class="divider"></div>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
         <p style="text-align:center; max-width:600px; margin: 0 auto var(--spacing-md);">
           Jedes Bild erzählt eine eigene Geschichte. Mal ruhig, mal lebendig – aber immer ehrlich.
           Schau dich gerne um und lass die Bilder auf dich wirken.
@@ -98,9 +112,9 @@
 
     <!-- DIALOG -->
     <section class="section section--dark" id="dialog">
-      <div class="container" style="max-width: 780px;">
+      <div class="container" style="max-width: 780px;" data-animate>
         <h2 class="section-title">Ins Gespräch kommen</h2>
-        <div class="divider"></div>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
         <p>
           Wenn du gerne diskutierst, dich mit anderen austauscht und vielleicht auch gerne
           philosophierst – dann bist du hier genau richtig! Dieser Raum soll nicht nur den
@@ -125,7 +139,48 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> Anita Schönburg · Alle Rechte vorbehalten</p>
+    <div class="footer-inner">
+      <p class="footer-name">Anita Schönburg</p>
+      <p class="footer-tagline">Malerei &amp; Gedanken</p>
+
+      <div class="footer-divider-line"></div>
+
+      <!-- Soziale Netzwerke -->
+      <nav class="footer-social" aria-label="Soziale Netzwerke">
+        <a href="mailto:anita@anitaschoenburg.de" class="footer-social-link" aria-label="E-Mail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </a>
+        <a href="https://www.facebook.com/anita.schonburg/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/a.nita2312/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.threads.com/@a.nita2312" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm.5 14.5c-2.485 0-4-1.567-4-3.5 0-.828.336-1.5.84-2.02-.28-.6-.44-1.26-.44-1.98 0-2.485 1.567-4 3.5-4 .514 0 1 .094 1.44.264.36-.16.76-.264 1.16-.264.38 0 .6.08.6.08v1.44s-.18-.08-.5-.08c-.22 0-.46.04-.68.12.26.44.42.96.42 1.52 0 1.933-1.515 3.5-4 3.5h-.08c-.2.32-.32.68-.32 1.06 0 .828.672 1.5 1.5 1.5.06 0 .12 0 .18-.004C13.812 14.118 15 13.012 15 11.5c0-.276-.028-.544-.08-.8.3.1.62.16.94.18C15.22 12.4 14.5 13.66 14.5 15c0 .184.016.364.048.54-.016 0-.032.002-.048.002-.828 0-1.5.672-1.5 1.5v-.042c-.165.028-.33.042-.5.042z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@OmasInternetAbenteuer" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#8B1A2B"/></svg>
+        </a>
+      </nav>
+
+      <div class="footer-divider-line"></div>
+
+      <!-- Stock-Plattformen -->
+      <p class="footer-stock">
+        Werke auch bei:
+        <a href="https://www.shutterstock.com/de/g/anitaschoenburg" target="_blank" rel="noopener noreferrer">Shutterstock</a>
+        &nbsp;·&nbsp;
+        <a href="https://stock.adobe.com/de/contributor/207565914/Anita" target="_blank" rel="noopener noreferrer">Adobe Stock</a>
+      </p>
+
+      <!-- Rechtliches -->
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+      </nav>
+
+      <p class="footer-copy">© <span id="year"></span> Anita Schönburg · Alle Rechte vorbehalten</p>
+    </div>
   </footer>
 
   <!-- LIGHTBOX -->

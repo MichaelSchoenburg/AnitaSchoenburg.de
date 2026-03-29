@@ -1,7 +1,9 @@
 // js/main.js
 
 // ── Aktuelles Jahr im Footer ──────────────────────────────
-document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('#year').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
 
 // ── Mobile Navigation (Hamburger) ────────────────────────
 const navToggle = document.getElementById('navToggle');
@@ -58,4 +60,39 @@ document.addEventListener('keydown', e => {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
   }
+});
+
+// ── Scroll-Animationen (Intersection Observer) ───────────
+const animatedEls = document.querySelectorAll('[data-animate]');
+if (animatedEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay || 0, 10);
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  animatedEls.forEach(el => revealObserver.observe(el));
+}
+
+// ── Aktiver Nav-Link ─────────────────────────────────────
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.site-nav a').forEach(link => {
+  const href = link.getAttribute('href');
+  let isActive = false;
+
+  if (currentPage === 'galerie.html' && href === 'galerie.html') {
+    isActive = true;
+  } else if (currentPage === 'index.html' || currentPage === '') {
+    if (href === '#willkommen' || href === 'index.html') {
+      isActive = true;
+    }
+  }
+
+  if (isActive) link.classList.add('is-active');
 });
