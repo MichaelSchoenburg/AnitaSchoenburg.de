@@ -36,7 +36,7 @@ body::before {
 h1, h2, h3 {
   font-family: var(--font-heading);
   font-weight: 400;
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
   line-height: 1.2;
 }
 
@@ -53,7 +53,7 @@ img {
 }
 
 a {
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
   text-decoration: none;
   transition: color var(--transition);
 }

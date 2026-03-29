@@ -15,22 +15,22 @@
 }
 
 .btn--primary {
-  background-color: var(--color-karmesin);
+  background-color: var(--color-pflaume);
   color: var(--color-gold);
-  border-color: var(--color-karmesin);
+  border-color: var(--color-pflaume);
 }
 .btn--primary:hover {
   background-color: transparent;
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: var(--color-karmesin);
-  border-color: var(--color-karmesin);
+  color: var(--color-pflaume);
+  border-color: var(--color-pflaume);
 }
 .btn--outline:hover {
-  background-color: var(--color-karmesin);
+  background-color: var(--color-pflaume);
   color: var(--color-gold);
 }
 
@@ -41,7 +41,7 @@
 }
 .btn--gold:hover {
   background-color: var(--color-gold);
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
 }
 
 /* ── Scroll-Animationen ── */
@@ -61,7 +61,7 @@
 .quote {
   font-style: italic;
   font-size: var(--size-subtitle);
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
   border-left: 3px solid var(--color-gold);
   padding-left: var(--spacing-sm);
   margin: var(--spacing-md) 0;

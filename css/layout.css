@@ -2,7 +2,7 @@
 
 /* ── Navigation ── */
 .site-header {
-  background-color: var(--color-karmesin);
+  background-color: var(--color-pflaume);
   padding: var(--spacing-sm) var(--spacing-md);
   position: sticky;
   top: 0;
@@ -83,7 +83,7 @@
 }
 
 .section--dark {
-  background-color: var(--color-karmesin);
+  background-color: var(--color-pflaume);
   color: var(--color-creme);
 }
 .section--dark h2 { color: var(--color-gold); }
@@ -130,7 +130,7 @@
 
 /* ── Footer ── */
 .site-footer {
-  background-color: var(--color-karmesin);
+  background-color: var(--color-pflaume);
   color: var(--color-gold);
   font-family: var(--font-body);
   font-size: var(--size-small);

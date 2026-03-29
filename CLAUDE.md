@@ -44,7 +44,7 @@ Die vollständige Design-Spec liegt in `docs/superpowers/specs/2026-03-29-brand-
 **Farben (via CSS-Variablen):**
 | Variable | HEX | Verwendung |
 |---|---|---|
-| `--color-karmesin` | `#8B1A2B` | Navigation, Überschriften, Buttons |
+| `--color-pflaume` | `#521040` | Navigation, Überschriften, Buttons |
 | `--color-gold` | `#D4AF37` | Akzente, Zierlinien, Hover — sparsam einsetzen |
 | `--color-creme` | `#FAF8F5` | Seitenhintergrund — nie reines Weiß |
 | `--color-text` | `#3A3A3A` | Fließtext — nie `#000000` |

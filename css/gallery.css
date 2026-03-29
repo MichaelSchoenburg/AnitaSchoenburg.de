@@ -33,7 +33,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(139, 26, 43, 0.85);
+  background: rgba(82, 16, 64, 0.85);
   color: var(--color-gold);
   font-style: italic;
   font-size: var(--size-small);
@@ -81,7 +81,7 @@
   font-family: var(--font-body);
   font-style: italic;
   font-size: 1rem;
-  color: var(--color-karmesin);
+  color: var(--color-pflaume);
   margin-bottom: 0.2rem;
 }
 
