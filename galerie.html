@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie – alle Gemälde von Anita Schönburg">
+  <title>Galerie – Anita Schönburg</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">
+        <span class="rose">🌹</span> Anita Schönburg
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="site-nav" id="siteNav">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+          <li><a href="index.html#dialog">Dialog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Meine Arbeiten</h1>
+        <div class="divider"></div>
+        <p style="text-align:center; max-width:600px; margin: 0 auto var(--spacing-lg);">
+          Jedes Bild erzählt eine eigene Geschichte. Mal ruhig, mal lebendig – aber immer ehrlich.
+          Lass die Bilder auf dich wirken.
+        </p>
+
+        <div class="gallery-grid">
+          <!-- Bild 1 -->
+          <div class="painting" data-caption="Ohne Titel I" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-1.jpg" alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#E8D5C0'; this.style.minHeight='350px'; this.removeAttribute('src')">
+            <div class="painting-info">
+              <h3>Ohne Titel I</h3>
+              <p>Mischtechnik auf Leinwand</p>
+            </div>
+          </div>
+          <!-- Bild 2 -->
+          <div class="painting" data-caption="Ohne Titel II" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-2.jpg" alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#D4C5B0'; this.style.minHeight='350px'; this.removeAttribute('src')">
+            <div class="painting-info">
+              <h3>Ohne Titel II</h3>
+              <p>Acryl auf Leinwand</p>
+            </div>
+          </div>
+          <!-- Bild 3 -->
+          <div class="painting" data-caption="Ohne Titel III" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-3.jpg" alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#C8B5A0'; this.style.minHeight='350px'; this.removeAttribute('src')">
+            <div class="painting-info">
+              <h3>Ohne Titel III</h3>
+              <p>Öl auf Leinwand</p>
+            </div>
+          </div>
+          <!-- Weitere Bilder hier einfügen — dasselbe Muster wie oben -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Anita Schönburg · Alle Rechte vorbehalten</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

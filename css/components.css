@@ -1,0 +1,56 @@
+/* css/components.css */
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-karmesin);
+  color: var(--color-gold);
+  border-color: var(--color-karmesin);
+}
+.btn--primary:hover {
+  background-color: transparent;
+  color: var(--color-karmesin);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-karmesin);
+  border-color: var(--color-karmesin);
+}
+.btn--outline:hover {
+  background-color: var(--color-karmesin);
+  color: var(--color-gold);
+}
+
+.btn--gold {
+  background-color: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+.btn--gold:hover {
+  background-color: var(--color-gold);
+  color: var(--color-karmesin);
+}
+
+/* ── Zitat-Block ── */
+.quote {
+  font-style: italic;
+  font-size: var(--size-subtitle);
+  color: var(--color-karmesin);
+  border-left: 3px solid var(--color-gold);
+  padding-left: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+  line-height: 1.6;
+}

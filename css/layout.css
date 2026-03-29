@@ -1,0 +1,143 @@
+/* css/layout.css */
+
+/* ── Navigation ── */
+.site-header {
+  background-color: var(--color-karmesin);
+  padding: var(--spacing-sm) var(--spacing-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.site-logo {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--color-gold);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-logo span.rose { font-size: 1.4rem; }
+
+.site-nav {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--size-small);
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+/* Hamburger (Mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.3rem;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-gold);
+  transition: var(--transition);
+}
+
+/* ── Sektions-Container ── */
+.section {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.section--dark {
+  background-color: var(--color-karmesin);
+  color: var(--color-creme);
+}
+.section--dark h2 { color: var(--color-gold); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+  margin: var(--spacing-sm) auto var(--spacing-md);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background-color: var(--color-karmesin);
+  color: var(--color-gold);
+  text-align: center;
+  padding: var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  letter-spacing: 0.05em;
+}
+
+/* ── Mobile Navigation ── */
+@media (max-width: 680px) {
+  .nav-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .site-nav a:last-child { border-bottom: none; }
+}

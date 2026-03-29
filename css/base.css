@@ -1,0 +1,47 @@
+/* css/base.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-creme);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--size-body);
+  line-height: 1.85;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-karmesin);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--size-hero); }
+h2 { font-size: var(--size-section); }
+h3 { font-size: 1.8rem; }
+
+p { margin-bottom: var(--spacing-sm); }
+p:last-child { margin-bottom: 0; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-karmesin);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover { color: var(--color-gold); }

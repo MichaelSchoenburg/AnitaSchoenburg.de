@@ -1,0 +1,33 @@
+/* css/variables.css */
+:root {
+  /* Farben */
+  --color-karmesin:  #8B1A2B;
+  --color-gold:      #D4AF37;
+  --color-creme:     #FAF8F5;
+  --color-text:      #3A3A3A;
+  --color-beige:     #E8D5C0;
+  --color-gold-soft: rgba(212, 175, 55, 0.3);
+
+  /* Schriften */
+  --font-heading: 'Great Vibes', cursive;
+  --font-body:    'Cormorant Garamond', serif;
+
+  /* Abstände */
+  --spacing-xs:  0.5rem;
+  --spacing-sm:  1rem;
+  --spacing-md:  2rem;
+  --spacing-lg:  4rem;
+  --spacing-xl:  6rem;
+
+  /* Typografie-Größen */
+  --size-hero:     4rem;
+  --size-section:  2.8rem;
+  --size-subtitle: 1.3rem;
+  --size-body:     1.05rem;
+  --size-small:    0.85rem;
+
+  /* Sonstiges */
+  --max-width: 1100px;
+  --border-gold: 1px solid var(--color-gold);
+  --transition: 0.25s ease;
+}

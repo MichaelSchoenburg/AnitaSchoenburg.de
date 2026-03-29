@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anita Schönburg – Malerei und Gedanken. Ein Raum zum Verweilen, Nachdenken und Austauschen.">
+  <title>Anita Schönburg – Malerei &amp; Gedanken</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">
+        <span class="rose">🌹</span> Anita Schönburg
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="site-nav" id="siteNav">
+          <li><a href="#willkommen">Start</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#dialog">Dialog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section" id="willkommen">
+      <div class="container" style="text-align: center; max-width: 780px;">
+        <h1>Willkommen</h1>
+        <div class="divider"></div>
+        <p>
+          Ich heiße euch hier recht herzlich willkommen in diesem Raum der vielen Gedanken –
+          zu denen meine Gemälde euch inspirieren sollen. Ich möchte anregen, zum Nachdenken
+          einladen und diesen Raum dafür zur Verfügung stellen. Schön, dass ihr da seid!
+        </p>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+    <section class="section section--alt" id="ueber-mich" style="background-color: var(--color-beige);">
+      <div class="container" style="max-width: 780px;">
+        <h2 class="section-title">Wer bin ich?</h2>
+        <div class="divider"></div>
+        <p>
+          Mein Name ist Anita Schönburg – und ich freue mich über jeden, der hier verweilen mag.
+          Für mich ist Kunst gleich die Kunst des Lebens: das, was von innen nach außen drängt
+          und sich offenbaren möchte. Meine Bilder entstehen meist aus dem heraus, was mich
+          gerade innerlich beschäftigt – sie sind ein Spiegel meiner Gedanken, Gefühle und Erlebnisse.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIE-VORSCHAU -->
+    <section class="section" id="galerie-vorschau">
+      <div class="container">
+        <h2 class="section-title">Meine Arbeiten</h2>
+        <div class="divider"></div>
+        <p style="text-align:center; max-width:600px; margin: 0 auto var(--spacing-md);">
+          Jedes Bild erzählt eine eigene Geschichte. Mal ruhig, mal lebendig – aber immer ehrlich.
+          Schau dich gerne um und lass die Bilder auf dich wirken.
+        </p>
+        <div class="gallery-preview" id="galleryPreview">
+          <div class="painting" data-caption="Ohne Titel I" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-1.jpg"
+                 alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#E8D5C0'; this.style.minHeight='250px'; this.removeAttribute('src')">
+            <div class="painting-caption">Ohne Titel I</div>
+          </div>
+          <div class="painting" data-caption="Ohne Titel II" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-2.jpg"
+                 alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#D4C5B0'; this.style.minHeight='250px'; this.removeAttribute('src')">
+            <div class="painting-caption">Ohne Titel II</div>
+          </div>
+          <div class="painting" data-caption="Ohne Titel III" onclick="openLightbox(this)">
+            <img src="assets/images/gemälde/bild-3.jpg"
+                 alt="Gemälde von Anita Schönburg"
+                 onerror="this.style.background='#C8B5A0'; this.style.minHeight='250px'; this.removeAttribute('src')">
+            <div class="painting-caption">Ohne Titel III</div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top: var(--spacing-md);">
+          <a href="galerie.html" class="btn btn--primary">Zur Galerie →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIALOG -->
+    <section class="section section--dark" id="dialog">
+      <div class="container" style="max-width: 780px;">
+        <h2 class="section-title">Ins Gespräch kommen</h2>
+        <div class="divider"></div>
+        <p>
+          Wenn du gerne diskutierst, dich mit anderen austauscht und vielleicht auch gerne
+          philosophierst – dann bist du hier genau richtig! Dieser Raum soll nicht nur den
+          Gemälden gehören, sondern auch den großen Fragen unserer Zeit. Zum Beispiel: Was
+          bedeutet der Einzug der Künstlichen Intelligenz für unser Leben? Welche Ängste und
+          Sorgen bewegen uns – und wie gehen wir damit um? Ich glaube, solche Themen brauchen
+          genau das: einen offenen, ehrlichen Austausch unter Menschen.
+        </p>
+        <blockquote class="quote" style="color: var(--color-gold); border-left-color: var(--color-gold);">
+          Ohne Licht kein Schatten, Schatten nur mit Licht. Beides gehört zusammen.
+          Oder wie denkst du darüber?
+        </blockquote>
+        <blockquote class="quote" style="color: var(--color-gold); border-left-color: var(--color-gold);">
+          Wie denkst du über KI?
+        </blockquote>
+        <div style="margin-top: var(--spacing-md);">
+          <a href="mailto:anita@anitaschoenburg.de" class="btn btn--gold">Schreib mir deine Gedanken</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Anita Schönburg · Alle Rechte vorbehalten</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
