@@ -77,7 +77,7 @@
             </div>
             <div class="gallery-grid" data-animate>
               <!-- Bild 1 -->
-              <div class="painting" data-caption="Ohne Titel I" onclick="openLightbox(this)">
+              <div class="painting" data-caption="Ohne Titel I" data-painting-id="ohne-titel-i" onclick="openLightbox(this)">
                 <img src="assets/images/gemälde/Gemälde_1.jpg" alt="Gemälde von Anita Schönburg"
                   onerror="this.style.background='#E8D5C0'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <!-- Bild 2 -->
-              <div class="painting" data-caption="Ohne Titel II" onclick="openLightbox(this)">
+              <div class="painting" data-caption="Ohne Titel II" data-painting-id="ohne-titel-ii" onclick="openLightbox(this)">
                 <img src="assets/images/gemälde/Gemälde_2.jpg" alt="Gemälde von Anita Schönburg"
                   onerror="this.style.background='#D4C5B0'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <!-- Bild 3 -->
-              <div class="painting" data-caption="Ohne Titel III" onclick="openLightbox(this)">
+              <div class="painting" data-caption="Ohne Titel III" data-painting-id="ohne-titel-iii" onclick="openLightbox(this)">
                 <img src="assets/images/gemälde/Gemälde_3.jpg" alt="Gemälde von Anita Schönburg"
                   onerror="this.style.background='#C8B5A0'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <!-- Bild 4 -->
-              <div class="painting" data-caption="Ohne Titel IV" onclick="openLightbox(this)">
+              <div class="painting" data-caption="Ohne Titel IV" data-painting-id="ohne-titel-iv" onclick="openLightbox(this)">
                 <img src="assets/images/gemälde/Gemälde_4.jpg" alt="Gemälde von Anita Schönburg"
                   onerror="this.style.background='#BCA898'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -126,7 +126,7 @@
             </div>
             <div class="gallery-grid" data-animate>
               <!-- KI-Bild 1 -->
-              <div class="painting" data-caption="KI-Bild I" onclick="openLightbox(this)">
+              <div class="painting" data-caption="KI-Bild I" data-painting-id="ki-bild-i" onclick="openLightbox(this)">
                 <img src="assets/images/ai-images/ai-image_1.jpg" alt="KI-generiertes Bild"
                   onerror="this.style.background='#C8B5A0'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -135,7 +135,7 @@
                 </div>
               </div>
               <!-- KI-Bild 2 -->
-              <div class="painting" data-caption="YouTube-Kanalbild" onclick="openLightbox(this)">
+              <div class="painting" data-caption="YouTube-Kanalbild" data-painting-id="youtube-kanalbild" onclick="openLightbox(this)">
                 <img src="assets/images/ai-images/ai-image_2.jpg" alt="KI-generiertes YouTube-Kanalbild"
                   onerror="this.style.background='#BCA898'; this.style.minHeight='350px'; this.removeAttribute('src')">
                 <div class="painting-info">
@@ -146,6 +146,7 @@
               </div>
               <!-- KI-Video 1 -->
               <div class="painting painting--video" data-caption="Kupfergrün auf altem Stein"
+                data-painting-id="kupfergruen-altem-stein"
                 data-video="assets/video/Kupfergrün_auf_altem_Stein.mp4" onclick="openVideoLightbox(this)">
                 <video src="assets/video/Kupfergrün_auf_altem_Stein.mp4" preload="metadata" muted playsinline
                   aria-hidden="true"></video>
@@ -240,6 +241,7 @@
     <img id="lightboxImg" src="" alt="">
     <video id="lightboxVideo" controls playsinline></video>
     <p class="lightbox-caption" id="lightboxCaption"></p>
+    <div id="giscus-container" onclick="event.stopPropagation()"></div>
   </div>
 
   <script src="js/main.js"></script>

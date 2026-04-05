@@ -165,9 +165,10 @@
   background: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   padding: var(--spacing-md);
+  overflow-y: auto;
 }
 
 .lightbox.is-open {
@@ -177,9 +178,10 @@
 .lightbox img,
 .lightbox video {
   max-width: 90vw;
-  max-height: 80vh;
+  max-height: 65vh;
   object-fit: contain;
   border: var(--border-gold);
+  margin-top: 3rem;
 }
 
 .lightbox video {
@@ -205,6 +207,13 @@
   line-height: 1;
 }
 .lightbox-close:hover { color: #fff; }
+
+#giscus-container {
+  width: 100%;
+  max-width: 760px;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
 
 /* ── Responsive Galerie ── */
 @media (max-width: 680px) {
