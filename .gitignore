@@ -1,2 +1,17 @@
 .claude/
 .superpowers/
+
+# Supabase
+supabase/.temp/
+supabase/functions/.env
+
+# Affinity Designer lock files
+*.af~lock~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
