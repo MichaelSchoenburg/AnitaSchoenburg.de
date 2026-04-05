@@ -30,8 +30,9 @@
 }
 
 .site-logo-img {
-  height: 35px;
-  width: auto;
+  height: 20px;
+  width: 20px;
+  filter: brightness(0) saturate(100%) invert(74%) sepia(47%) saturate(538%) hue-rotate(3deg) brightness(96%) contrast(97%);
 }
 
 .site-nav {

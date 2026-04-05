@@ -57,6 +57,18 @@
   transform: translateY(0);
 }
 
+/* ── Profilbild ── */
+.headshot {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin: var(--spacing-md) auto 0;
+  border: 2px solid var(--color-gold);
+}
+
 /* ── Zitat-Block ── */
 .quote {
   font-style: italic;
