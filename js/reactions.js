@@ -26,26 +26,10 @@ export async function setReaction(userId, targetId, targetType, emoji) {
 
   if (existing) {
     await supabase.from('reactions').delete().eq('id', existing.id);
-    await updateReactionCount(targetId, targetType, existing.emoji, -1);
     if (existing.emoji === emoji) return;
   }
 
   await supabase.from('reactions').insert({ user_id: userId, target_id: targetId, target_type: targetType, emoji });
-  await updateReactionCount(targetId, targetType, emoji, 1);
-}
-
-async function updateReactionCount(targetId, targetType, emoji, delta) {
-  if (targetType === 'painting') {
-    const { data } = await supabase.from('paintings').select('reaction_counts').eq('id', targetId).single();
-    const counts = data?.reaction_counts ?? {};
-    counts[emoji] = Math.max(0, (counts[emoji] ?? 0) + delta);
-    if (counts[emoji] === 0) delete counts[emoji];
-    await supabase.from('paintings').update({ reaction_counts: counts }).eq('id', targetId);
-  } else {
-    const { data } = await supabase.from('comments').select('reaction_count').eq('id', targetId).single();
-    const newCount = Math.max(0, (data?.reaction_count ?? 0) + delta);
-    await supabase.from('comments').update({ reaction_count: newCount }).eq('id', targetId);
-  }
 }
 
 export function renderReactionsBar(container, targetId, targetType, currentUserId) {
@@ -106,7 +90,7 @@ function openEmojiPicker(anchor, onSelect) {
     pickerEl.style.left = rect.left + 'px';
 
     pickerEl.addEventListener('emoji-click', e => {
-      onSelect(e.detail.unicode);
+      onSelect(e.detail.native);
       pickerEl.remove(); pickerEl = null;
     });
 
