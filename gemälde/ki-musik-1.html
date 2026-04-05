@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ohne Titel III – Anita Schönburg</title>
+  <title>KI-Musik #1 – Anita Schönburg</title>
   <link rel="icon" type="image/png" href="../assets/images/logo/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,17 +40,16 @@
         <a href="../galerie.html" style="display:inline-block;margin-bottom:var(--spacing-md);font-family:var(--font-body);color:var(--color-pflaume);">← Zurück zur Galerie</a>
         <div style="display:flex;flex-wrap:wrap;gap:var(--spacing-lg);align-items:flex-start;">
           <div style="flex:1 1 400px;">
-            <img
-              src="../assets/images/gemälde/Gemälde_3.jpg"
-              alt="Ohne Titel III – Gemälde von Anita Schönburg"
+            <video
+              src="../assets/video/Kupfergrün_auf_altem_Stein.mp4"
+              controls
               style="width:100%;border:var(--border-gold);"
-              onerror="this.style.background='#C8B5A0';this.style.minHeight='400px';this.removeAttribute('src')"
-            >
+            ></video>
             <div id="paintingReactions"></div>
           </div>
           <div style="flex:0 0 260px;">
-            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">Ohne Titel III</h1>
-            <p style="font-family:var(--font-body);color:var(--color-text);">Öl auf Leinwand</p>
+            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">KI-Musik #1</h1>
+            <p style="font-family:var(--font-body);color:var(--color-text);">KI-generierte Musik</p>
             <div id="authArea" style="margin-top:var(--spacing-md);"></div>
           </div>
         </div>
@@ -72,7 +71,7 @@
     import { renderCommentsSection } from '../js/comments.js';
     import { renderReactionsBar } from '../js/reactions.js';
 
-    const PAINTING_ID = 'ohne-titel-iii';
+    const PAINTING_ID = 'ki-musik-1';
     const authArea = document.getElementById('authArea');
 
     onUserChanged(async user => {

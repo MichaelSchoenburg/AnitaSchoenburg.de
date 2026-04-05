@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kupfergrün auf altem Stein – Anita Schönburg</title>
+  <title>Geschichte des Lebens – Anita Schönburg</title>
   <link rel="icon" type="image/png" href="../assets/images/logo/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,16 +40,17 @@
         <a href="../galerie.html" style="display:inline-block;margin-bottom:var(--spacing-md);font-family:var(--font-body);color:var(--color-pflaume);">← Zurück zur Galerie</a>
         <div style="display:flex;flex-wrap:wrap;gap:var(--spacing-lg);align-items:flex-start;">
           <div style="flex:1 1 400px;">
-            <video
-              src="../assets/video/Kupfergrün_auf_altem_Stein.mp4"
-              controls
+            <img
+              src="../assets/images/gemälde/Gemälde_1.jpg"
+              alt="Geschichte des Lebens – Gemälde von Anita Schönburg"
               style="width:100%;border:var(--border-gold);"
-            ></video>
+              onerror="this.style.background='#E8D5C0';this.style.minHeight='400px';this.removeAttribute('src')"
+            >
             <div id="paintingReactions"></div>
           </div>
           <div style="flex:0 0 260px;">
-            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">Kupfergrün auf altem Stein</h1>
-            <p style="font-family:var(--font-body);color:var(--color-text);">KI-generierte Musik</p>
+            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">Geschichte des Lebens</h1>
+            <p style="font-family:var(--font-body);color:var(--color-text);">Mischtechnik auf Leinwand</p>
             <div id="authArea" style="margin-top:var(--spacing-md);"></div>
           </div>
         </div>
@@ -71,7 +72,7 @@
     import { renderCommentsSection } from '../js/comments.js';
     import { renderReactionsBar } from '../js/reactions.js';
 
-    const PAINTING_ID = 'kupfergruen-altem-stein';
+    const PAINTING_ID = 'geschichte-des-lebens';
     const authArea = document.getElementById('authArea');
 
     onUserChanged(async user => {

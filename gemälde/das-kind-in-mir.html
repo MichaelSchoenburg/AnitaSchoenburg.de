@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ohne Titel I – Anita Schönburg</title>
+  <title>Das Kind in mir – Anita Schönburg</title>
   <link rel="icon" type="image/png" href="../assets/images/logo/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,16 +41,16 @@
         <div style="display:flex;flex-wrap:wrap;gap:var(--spacing-lg);align-items:flex-start;">
           <div style="flex:1 1 400px;">
             <img
-              src="../assets/images/gemälde/Gemälde_1.jpg"
-              alt="Ohne Titel I – Gemälde von Anita Schönburg"
+              src="../assets/images/ai-images/ai-image_1.jpg"
+              alt="Das Kind in mir – KI-generiertes Bild"
               style="width:100%;border:var(--border-gold);"
-              onerror="this.style.background='#E8D5C0';this.style.minHeight='400px';this.removeAttribute('src')"
+              onerror="this.style.background='#C8B5A0';this.style.minHeight='400px';this.removeAttribute('src')"
             >
             <div id="paintingReactions"></div>
           </div>
           <div style="flex:0 0 260px;">
-            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">Ohne Titel I</h1>
-            <p style="font-family:var(--font-body);color:var(--color-text);">Mischtechnik auf Leinwand</p>
+            <h1 class="section-title" style="text-align:left;margin-bottom:var(--spacing-sm);">Das Kind in mir</h1>
+            <p style="font-family:var(--font-body);color:var(--color-text);">KI-generiert</p>
             <div id="authArea" style="margin-top:var(--spacing-md);"></div>
           </div>
         </div>
@@ -72,7 +72,7 @@
     import { renderCommentsSection } from '../js/comments.js';
     import { renderReactionsBar } from '../js/reactions.js';
 
-    const PAINTING_ID = 'ohne-titel-i';
+    const PAINTING_ID = 'das-kind-in-mir';
     const authArea = document.getElementById('authArea');
 
     onUserChanged(async user => {
