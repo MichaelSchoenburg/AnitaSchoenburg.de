@@ -215,6 +215,12 @@
   margin-bottom: var(--spacing-lg);
 }
 
+a.painting {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* ── Responsive Galerie ── */
 @media (max-width: 680px) {
   .gallery-preview {
